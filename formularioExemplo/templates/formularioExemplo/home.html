@@ -11,14 +11,14 @@
 
 <div class="container mt-3">
   <h2>Novell Services Login</h2>
-  <form action="">
+  <form action="{% url 'mostra' %}">
     <div class="mb-3 mt-3">
       <label for="idName">Username:</label>
       <input type="text" class="form-control" id="idName" placeholder="Enter username" name="userName" required>
     </div>
     <div class="mb-3">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required>
     </div>
     <div class="mb-3">
         <label for="idCity">City of employment:</label>
@@ -26,7 +26,7 @@
     </div>
     <div class="mb-3">
         <label for="idweb">Web Server:</label>
-        <select name="web" class="form-select">
+        <select name="server" class="form-select">
             <option value="1">Apache</option>
             <option value="2">IIS</option>
             <option value="3">Tomcat</option>
@@ -35,19 +35,19 @@
     <div class="mb-3">
         <label for="idRole">Please specify your role:</label>
         <div class="form-check">
-            <input type="radio" id="idRole" name="rol" value="Admin" class="form-check-input" required>
+            <input type="radio" id="idRole" name="role" value="Admin" class="form-check-input" required>
             <label class="form-check-label" for="idRole">Admin</label>
         </div>
         <div class="form-check">
-            <input type="radio" id="idEngineer" name="rol" value="Engineer" class="form-check-input">
+            <input type="radio" id="idEngineer" name="role" value="Engineer" class="form-check-input">
             <label class="form-check-label" for="idEngineer">Engineer</label>
         </div>
         <div class="form-check">
-            <input type="radio" id="idManager" name="rol" value="Manager" class="form-check-input">
+            <input type="radio" id="idManager" name="role" value="Manager" class="form-check-input">
             <label for="idManager" class="form-check-label">Manager</label>
         </div>
         <div class="form-check">
-            <input type="radio" id="idGuest" name="rol" value="Guest" class="form-check-input">
+            <input type="radio" id="idGuest" name="role" value="Guest" class="form-check-input">
             <label for="idGuest" class="form-check-label">Guest</label>
         </div>
     </div>

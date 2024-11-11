@@ -2,13 +2,33 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    # Acceder al valor del botón de radio seleccionado
-    opcion = request.GET.get('opcion')
-    
-    # Acceder a los valores seleccionados de los checkboxes (como lista)
-    preferencias = request.GET.getlist('preferencias')
+    return render(request, 'formularioExemplo/home.html')
 
-    # Puedes procesar los datos, aquí simplemente los mostramos en el navegador
-    response_text = f"Botón de radio seleccionado: {opcion}<br>"
-    response_text += "Preferencias seleccionadas: " + ", ".join(preferencias)
-    return HttpResponse(response_text)
+def mostra(request):
+    userName = request.GET.get('userName')
+    password = request.GET.get('password')
+    city = request.GET.get('city')
+    server = request.GET.get('server')
+    role = request.GET.get('role')
+    mail = request.GET.get('mail')
+    payroll = request.GET.get('payroll')
+    selfService = request.GET.get('selfService')   
+    # Use a list to check and assign the server
+    options = ['Apache', 'IIS', 'Tomcat']
+    opcion = options[int(server)-1]
+    # Create a string with the values of the checkboxes
+    signon = ""
+    if mail:
+        signon = signon + mail
+    if payroll:
+        signon = signon + " " + payroll
+    if selfService:
+        signon = signon + " " + selfService
+    datos = {'userName':userName,
+             'password':password,
+             'city':city,
+             'server':opcion,
+             'role':role,
+             'signon':signon}
+    return render(request, 'formularioExemplo/mostra.html', datos)
+
