@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Bootstrap 5</title>
+    <!-- Enlace a Bootstrap 5 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Formulario de Registro</h2>
+    <form>
+        <!-- Nombre -->
+        <div class="mb-3 row">
+            <label for="nombre" class="col-sm-3 col-form-label text-end">Nombre:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3 row">
+            <label for="email" class="col-sm-3 col-form-label text-end">Email:</label>
+            <div class="col-sm-9">
+                <input type="email" class="form-control" id="email" placeholder="Ingresa tu email">
+            </div>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="mb-3 row">
+            <label for="password" class="col-sm-3 col-form-label text-end">Contraseña:</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+            </div>
+        </div>
+
+        <!-- Confirmar contraseña -->
+        <div class="mb-3 row">
+            <label for="confirmPassword" class="col-sm-3 col-form-label text-end">Confirmar Contraseña:</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirma tu contraseña">
+            </div>
+        </div>
+
+        <!-- Botón de envío -->
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Enlace a Bootstrap 5 JavaScript (opcional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
